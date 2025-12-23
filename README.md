@@ -54,29 +54,43 @@ make start
 ```
 
 ### `make stop`
-Stops all containers, removes volumes, and clears cached images.
+Stops all containers and clears cached images.
 
 ```bash
 make stop
 ```
 
-### `make permissions`
+### `make perm`
 Sets correct file ownership and permissions for the application to handle image uploads. This command:
 - Changes ownership of project files to `www-data:www-data`
 - Sets directory permissions to 775
 - Adds your current user to the `www-data` group
 
 ```bash
-make permissions
+make perm
 ```
 
 **Note**: After running this command for the first time, log out and back in for group membership changes to take effect.
 
-### `make clear-cache`
+### `make clcache`
 Removes all uploaded images from the cache directory.
 
 ```bash
-make clear-cache
+make clcache
+```
+
+### `make cpvendor`
+Copies the vendor folder from the Docker container to the host machine. Useful for IDE autocompletion and local development.
+
+```bash
+make cpvendor
+```
+
+### `make rmv`
+Removes all Docker volumes associated with the project (vendor_data, mongodb_data, mongodb_config).
+
+```bash
+make rmv
 ```
 
 ## Project Structure

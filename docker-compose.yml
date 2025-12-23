@@ -5,6 +5,7 @@ services:
       - "8080:80"
     volumes:
       - .:/var/www/html
+      - vendor_data:/var/www/html/vendor
     depends_on:
       - mongodb
     environment:
@@ -18,6 +19,7 @@ services:
       - "27017:27017"
     volumes:
       - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
       - ./src/admin.js:/docker-entrypoint-initdb.d/01-admin.js
       - ./src/user.js:/docker-entrypoint-initdb.d/02-user.js
     networks:
@@ -25,6 +27,8 @@ services:
 
 volumes:
   mongodb_data:
+  mongodb_config:
+  vendor_data:
 
 networks:
   gallery-network:
