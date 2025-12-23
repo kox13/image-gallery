@@ -25,7 +25,7 @@ This is **development code**. For the application to work correctly, you **must*
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/kox13/image-gallery.git
    cd dev-wai
    ```
 
