@@ -1,0 +1,83 @@
+main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    row-gap: 1em;
+}
+
+main:has(h3){
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, calc(20% - 1em)));
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    gap: 1em;
+}
+
+form div.image-card {
+    padding: .5em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .85em;
+    row-gap: .25em;
+    /*height: 13em;*/
+}
+
+form div.image-card .image-author {
+    font-size: .7em;
+    color: darkgray;
+}
+
+form div.image-card .image-private {
+    font-size: .6em;
+}
+form label:has(input[type="submit"]) {
+    position: fixed;
+    right: 1.5em;
+    bottom: 2em;
+}
+
+form label #favouritesFormSubmit {
+    padding: .4em;
+    background: darkslateblue;
+    color: white;
+    cursor: pointer;
+}
+
+div#pagingContainer {
+    width: 100%;
+}
+
+div#pagingContainer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.25em;
+    font-size: .8em;
+}
+
+div#pagingContainer ul li {
+    list-style-type: none;
+}
+
+div#pagingContainer ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding: .1em .2em .1em .2em;
+    border: .05em solid black;
+}
+
+div#pagingContainer ul li a:hover{
+    background-color: black;
+    color: white;
+}

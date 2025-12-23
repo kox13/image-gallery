@@ -1,0 +1,79 @@
+@import 'vars.css';
+
+form {
+    width: 25em;
+    border: .2em solid black;
+    border-radius: .6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    padding: 2em 1em 2em 1em;
+    position: relative;
+}
+
+form label {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: .1em;
+    font-size: 1.1em;
+}
+
+form label input[type="text"], form label input[type="password"] {
+    border: .15em solid black;
+    border-radius: 1em;
+    height: 2.5em;
+    padding: 1em;
+}
+
+form label input, form label span.inputSpan {
+    flex: 5;
+}
+
+form label span.textSpan {
+    flex: 2;
+    font-size: .9em;
+}
+
+form #formButtons {
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form #formButtons input {
+    width: 45%;
+    font-size: .7em;
+}
+
+form #privacyRadioContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: .7em;
+}
+
+form #privacyRadioContainer label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5em;
+}
+
+@media screen and (max-width: 576px){
+    form {
+        border: none;
+    }
+
+    form label{
+        width: 100%;
+    }
+
+    form #formButtons input {
+        font-size: .8em;
+    }
+}

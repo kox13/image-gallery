@@ -1,0 +1,120 @@
+@import 'vars.css';
+@import 'fonts.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    font-size: clamp(.5rem, 1vmax + .5em, 4rem);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', 'sans-serif';
+}
+
+header {
+    width: 100%;
+    height: var(--header-height);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background: url("../images/banner.jpg");
+    background-size: cover;
+    background-position-y: -30vh;
+}
+
+header nav {
+    width: 100%;
+    height: 28%;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+header nav ul li {
+    flex: 1;
+    height: 100%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: .75em;
+}
+
+header nav ul li a:hover {
+    background: black;
+    color: white;
+}
+
+main {
+    width: 100vw;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100vw;
+    height: var(--footer-height);
+    background: grey;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .6em;
+}
+
+@media screen and (max-width: 768px){
+    header nav ul {
+        width: 100%;
+        font-size: .8em;
+        font-weight: 600;
+    }
+}
+
+div#messageContainer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .25em 1em .25em 1em;
+    border: .25em solid black;
+    border-radius: 0 0 1em 1em;
+    border-top: none;
+    font-size: .7em;
+    z-index: 2;
+    transition: top 1s ease-in-out;
+}
+
+div.warning {
+    background: red;
+    color: white;
+}
+
+div.success {
+    background: lightgreen;
+}

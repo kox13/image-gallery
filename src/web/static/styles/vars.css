@@ -1,0 +1,9 @@
+:root {
+    --header-height: 25vh;
+    --footer-height: 1.5em;
+
+    @media screen and (max-width: 768px){
+        --header-height: 15vh;
+        --footer-height: 1em;
+    }
+}
