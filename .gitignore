@@ -1,0 +1,3 @@
+/vendor
+/src/web/images/*
+!src/web/images/.gitkeep
