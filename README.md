@@ -82,7 +82,7 @@ make clear-cache
 ## Project Structure
 
 ```
-dev-wai/
+image-gallery/
 ├── src/
 │   ├── classes/           # Application classes
 │   │   ├── controllers/   # MVC controllers
