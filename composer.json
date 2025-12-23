@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mongodb/mongodb": "^1.1",
+        "ext-mongodb": "*",
+        "ext-gd": "*"
+    }
+}

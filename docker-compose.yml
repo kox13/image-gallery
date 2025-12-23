@@ -1,0 +1,31 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - mongodb
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017
+    networks:
+      - gallery-network
+
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./src/admin.js:/docker-entrypoint-initdb.d/01-admin.js
+      - ./src/user.js:/docker-entrypoint-initdb.d/02-user.js
+    networks:
+      - gallery-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  gallery-network:
+    driver: bridge
